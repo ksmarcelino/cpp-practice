@@ -102,12 +102,11 @@ int main()
     }
             cout << "Enter your money: ";
             cin >> money;
-
-            change = money - price;
-
+            
             if (money >= price)
             {
                 cout << "Purchase successful." << endl;
+                change = money - price;
                 cout << "Your change: " << change << endl;
             }
             else
