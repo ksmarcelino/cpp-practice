@@ -49,7 +49,6 @@ int main()
                 default:
                     cout << "It's not in the menu!" << endl;
                     return 0;
-                    break;
            }
 
            cout << "\nHow many do you want? ";
@@ -75,7 +74,7 @@ int main()
            }
         }
             
-            cout << "Your total spent is: " << grandTotal << endl;
+            cout << "\nYour total spent is: " << grandTotal << endl;
             cout <<"Thank you for ordering!" << endl;
             cout <<"\nProgram ended...";
 
