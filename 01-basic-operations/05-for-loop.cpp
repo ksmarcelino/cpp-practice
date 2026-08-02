@@ -16,7 +16,7 @@ using namespace std;
 
 int main()
 {
-    int foods, money, change, price, quantity, total, grandTotal = 0;
+     int foods, money, change, price, quantity, total, grandTotal = 0;
 
     for (int i = 1; i <= 3; i++)
         {
