@@ -64,7 +64,7 @@ using namespace std;
 
 int main()
 {
-    int userChoices, enterGrade, studentGrade = -1;
+    int userChoices, enterGrade, temporaryGrade, studentGrade = -1;
     string status = "No grade entered yet.";
 
     do
@@ -76,13 +76,15 @@ int main()
         {
             case 1:
                 cout << "Enter student's grade: ";
-                cin >> studentGrade;
-                cout << "Grade saved!" << endl;
-                if (studentGrade < 0 || studentGrade > 100)
+                cin >> temporaryGrade;
+
+                if (temporaryGrade < 0 || temporaryGrade > 100)
                 {
                     cout << "Invalid grade." << endl;
+                    break;
                 }
-                break;
+                studentGrade = temporaryGrade;
+                cout << "Grade saved!" << endl;
                 if (studentGrade >= 90)
                 {
                     status = "Excellent";
@@ -99,6 +101,7 @@ int main()
                     cout << "Status: " << status << endl;
                     cout << "Do better next time." << endl;
                 }
+                break;
 
             case 2:
 
