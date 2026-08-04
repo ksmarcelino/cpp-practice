@@ -64,7 +64,7 @@ using namespace std;
 
 int main()
 {
-    int userChoices, enterGrade, temporaryGrade, studentGrade = -1;
+    int userChoices, temporaryGrade, studentGrade = -1;
     string status = "No grade entered yet.";
 
     do
