@@ -1,6 +1,33 @@
 #include <iostream>
 using namespace std;
 
+int main ()
+{
+        string name;
+
+        cout << "Enter name: ";
+        cin >> name;
+
+        if(name != "Dane")
+        {
+                cout << "Wrong name!" << endl;
+        }
+        else
+        {
+                cout << "Passed!" << endl;
+        }
+
+
+        return 0;
+}
+
+
+
+
+
+/*#include <iostream>
+using namespace std;
+
 int main() {
         int d, e;
         
@@ -15,4 +42,4 @@ int main() {
         cout << "Remainder: " << d % e << endl;
 
         return 0;
-}
+}*/
