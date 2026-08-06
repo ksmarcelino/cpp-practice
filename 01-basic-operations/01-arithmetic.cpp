@@ -1,4 +1,4 @@
-#include <iostream>
+/*#include <iostream>
 using namespace std;
 
 int main ()
@@ -19,13 +19,13 @@ int main ()
 
 
         return 0;
-}
+}*/
 
 
 
+// Arithmetic Practice
 
-
-/*#include <iostream>
+#include <iostream>
 using namespace std;
 
 int main() {
@@ -42,4 +42,4 @@ int main() {
         cout << "Remainder: " << d % e << endl;
 
         return 0;
-}*/
+}
