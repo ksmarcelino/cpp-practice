@@ -16,6 +16,5 @@ int main()
 
     cout << "Current Balance: " << balance << endl;
 
-
     return 0;
 }

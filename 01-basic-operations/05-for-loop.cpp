@@ -5,7 +5,7 @@ int main()
 {
     for (int i = 1; i <= 5; i += 2)
     {
-        cout << "love u dane." << endl; 
+        cout << "missudane" << endl; 
     }
 
     return 0;
