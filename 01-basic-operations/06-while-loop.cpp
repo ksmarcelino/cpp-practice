@@ -29,7 +29,7 @@ int main()
     cout << "Enter the pasword: ";
     cin >> epass;
 
-    while (epass != "loveudane")
+    while (epass != "Dane")
     {
         cout << "Wrong password!" << endl;
 
