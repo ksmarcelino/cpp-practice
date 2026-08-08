@@ -27,17 +27,17 @@ int main()
 
     } while (guess != secretNumber && numAttempts < 7);
     
-    if (numAttempts == 7 && guess != 37)
+    if (numAttempts == 7 && guess != secretNumber)
     {
         cout << "\nGame Over!\nThe secret number was " << secretNumber << "." << endl;
     }
     else if (numAttempts > 1)
     {
-        cout << "\nYou guess the number in " << numAttempts << " attempts!" << endl;
+        cout << "\nYou guessed the number in " << numAttempts << " attempts!" << endl;
     }
     else
     {
-        cout << "\nYou guess the number in " << numAttempts << " attempt!" << endl;
+        cout << "\nYou guessed the number in " << numAttempts << " attempt!" << endl;
     }
 
 
