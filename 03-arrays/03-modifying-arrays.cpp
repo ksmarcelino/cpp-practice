@@ -36,7 +36,7 @@ int main()
     
 
     return 0;
-}*/
+}
 
 #include <iostream>
 
@@ -72,8 +72,80 @@ int main()
     {
         std::cout << "Number not found\n";
     }
+    
+    return 0;
+}*/
 
+#include <iostream>
+#include <string>
 
+int main()
+{
+    std::string students[5];
+    std::string searchStudent, renameStudent;
+    int choice;
 
+    for (int i = 0; i < 5; i++)
+    {
+        std::cout << "Enter Student #" << i + 1 << ": ";
+        std::cin >> students[i];
+    }
+
+    std::cout << "\nSearch student: ";
+    std::cin >> searchStudent;
+
+    bool found = false;
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (students[i] == searchStudent)
+        {
+            found = true;
+        }
+
+        if (students[i] == searchStudent)
+        {
+            std::cout << '\n' << searchStudent << " was found at position #" << i + 1 << '\n'; 
+        }
+    }
+
+    if (found)
+    {
+        std::cout << "Student found!" << '\n';
+    }
+
+    else
+    {
+        std::cout << "Student not found!" << '\n';
+    }
+
+    std::cout << "\nDo you want to rename this student?(1 or 2)\n\n1. Yes\n2. No\n\nChoose: ";
+    std::cin >> choice;
+    
+   switch(choice)
+   {
+    case 1:
+        std::cout << "\nEnter new name: ";
+        std::cin >> renameStudent;
+        break;
+
+    case 2:
+        return 0;
+        break;
+
+    default:
+        std::cout << "Invalid choice!" << '\n';
+   }
+
+   for (int i = 0; i < 5; i++)
+   {
+        if (students[i] == searchStudent)
+        {
+            students[i] = renameStudent;
+        }
+
+        std::cout << students[i] << '\n';
+   }
     return 0;
 }
+
