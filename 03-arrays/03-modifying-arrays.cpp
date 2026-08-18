@@ -83,7 +83,7 @@ int main()
 {
     std::string students[5];
     std::string searchStudent, renameStudent;
-    int choice;
+    int choice, foundIndex = -1;
 
     for (int i = 0; i < 5; i++)
     {
@@ -94,33 +94,29 @@ int main()
     std::cout << "\nSearch student: ";
     std::cin >> searchStudent;
 
-    bool found = false;
 
     for (int i = 0; i < 5; i++)
     {
         if (students[i] == searchStudent)
         {
-            found = true;
+            foundIndex = i;
+            std::cout << '\n' << searchStudent << " was found at index #" << foundIndex << '\n';
         }
 
-        if (students[i] == searchStudent)
-        {
-            std::cout << '\n' << searchStudent << " was found at position #" << i + 1 << '\n'; 
-        }
     }
 
-    if (found)
+    if (foundIndex != -1)
     {
         std::cout << "Student found!" << '\n';
+        std::cout << "\nDo you want to rename this student?(1 or 2)\n\n1. Yes\n2. No\n\nChoose: ";
+        std::cin >> choice;
     }
 
     else
     {
         std::cout << "Student not found!" << '\n';
+        return 0;
     }
-
-    std::cout << "\nDo you want to rename this student?(1 or 2)\n\n1. Yes\n2. No\n\nChoose: ";
-    std::cin >> choice;
     
    switch(choice)
    {
@@ -131,21 +127,50 @@ int main()
 
     case 2:
         return 0;
-        break;
 
     default:
         std::cout << "Invalid choice!" << '\n';
+        return 0;
    }
+
+   students[foundIndex] = renameStudent;
 
    for (int i = 0; i < 5; i++)
    {
-        if (students[i] == searchStudent)
-        {
-            students[i] = renameStudent;
-        }
-
         std::cout << students[i] << '\n';
    }
+
     return 0;
 }
+
+/*#include <iostream>
+
+int main()
+{
+    int numbers[6] = {4, 8, 15, 16, 23, 42};
+    int searchNumber, foundIndex = -1;
+
+    std::cout << "Enter a number to search: ";
+    std::cin >> searchNumber;
+
+
+    for (int i = 0; i < 6; i++)
+    {
+        if (numbers[i] == searchNumber)
+        {
+            foundIndex = i;
+        }
+    }
+
+    if (foundIndex != -1)
+    {
+        std::cout << "\nFound at index " << foundIndex << '\n';
+    }
+    else
+    {
+        std::cout << "\nNumber not found!" << '\n';
+    }
+
+    return 0;
+}*/
 
