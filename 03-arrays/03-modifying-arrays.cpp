@@ -101,6 +101,7 @@ int main()
         {
             foundIndex = i;
             std::cout << '\n' << searchStudent << " was found at index #" << foundIndex << '\n';
+            break;
         }
 
     }
