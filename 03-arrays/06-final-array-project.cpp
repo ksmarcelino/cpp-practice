@@ -106,7 +106,7 @@ void displayStudents(std::string students[], int scores[], int size)
 
     for (int i = 0; i < size; i++)
     {
-        std::cout <<students[i] << " - " << scores[i] << '\n';
+        std::cout << students[i] << " - " << scores[i] << '\n';
     }
 }
 
